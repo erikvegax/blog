@@ -1,0 +1,58 @@
+.content{
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding-top: 12rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid #efefef;
+    position: relative;
+}
+
+.content{
+    background: #ffffff;
+    padding: 4.4rem 0 3.6rem 0;
+}
+
+.content__main {
+    padding-right: 4.6rem;
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * content
+ * ------------------------------------------------------------------- */
+@media screen and (max-width:1200px) {
+    .content__main {
+        padding-right: 3.6rem;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .content__main {
+        padding-right: 2.4rem;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .content__main {
+        -ms-flex: 0 0 100%;
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .content__main {
+        padding-right: 16px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .content__main {
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .content__main {
+        padding-right: 0;
+    }
+}
