@@ -12,13 +12,13 @@ type Props = {
 
 const Thumbnail = ({ title, src, slug }: Props) => {
     const image = (
-        <div className={styles["media"]}>
+        <div className={styles.media}>
             <Image
                 height={600}
                 width={1000}
                 src={src}
                 style={{ objectFit: "cover" }}
-                alt={`Thumbnail cover image ${title}`}
+                alt={`${title} thumbnail`}
             />
         </div>
 

@@ -28,10 +28,10 @@ const PostPage = ({ source, frontMatter }: Props) => {
     return (
         <>
             <Header />
-            <div className={styles["content"]}>
+            <div className={styles.content}>
                 <div className='row'>
                     <div className={`${styles["content__main"]} large-8 column`}>
-                        <article className={styles["entry"]}>
+                        <article className={styles.entry}>
                             <header className={styles["entry__header"]}>
                                 <h2 className={`${styles["entry__title"]} h1`}>
                                     {frontMatter.title}
@@ -77,8 +77,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
     //only get the slug from posts 
     const posts = getAllPosts(['slug']);
-
-    console.log(posts)
 
     // map through to return post paths
     const paths = posts.map((post) => ({

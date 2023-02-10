@@ -1426,8 +1426,8 @@ small {
 
 blockquote {
     margin: 4rem 0;
-    padding: 4rem 4rem;
-    border-left: 4px solid #272727;
+    padding: 2rem 2rem;
+    border-left: 2px solid #272727;
     position: relative;
 }
 
@@ -1447,7 +1447,7 @@ blockquote p {
     font-family: "Merriweather", serif;
     font-weight: 400;
     padding: 0;
-    font-size: 2.278rem;
+    font-size: 1.4rem;
     line-height: 1.756;
     color: #272727;
 }
@@ -1557,7 +1557,6 @@ html {
 
 html, body {
     height: 100%;
-    width: 100vw;
 }
 
 body {

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import type { NextPage } from 'next'
+import Image from 'next/image';
 
 import Header from './components/Header'
 
@@ -12,23 +13,23 @@ const about: NextPage<Props> = () => {
     return (
         <>
             <Header />
-            <div className={styles["content"]}>
+            <div className={styles.content}>
                 <div className='row'>
                     <div className={`${styles["content__main"]} large-8 column`}>
-                        <article className={styles["entry"]}>
-                            <header className={styles["entry__header"]}>
-                                <h2 className={`${styles["entry__title"]} h1`}>
-                                    about
-                                </h2>
-                                <div className={styles["entry__meta"]}>
-                                    <ul>
-                                        <li>socials</li>
-                                    </ul>
-                                </div>
-                            </header>
-                            {/* <Thumbnail title={frontMatter.title} src={frontMatter.thumbnail} /> */}
+                        <article className={styles.entry}>
+                            <Image
+                                height={600}
+                                width={400}
+                                src={"/assets/sleeping.jpg"}
+                                alt={"sleeping erik"}
+                            />
                             <div className={styles["entry__content"]}>
-                                content
+                                <p>
+                                    thanks and welcome to my blog. this probably won&#39;t be too serious; i&#39;ll just post about things that have
+                                    happened or things that i like. hope you enjoy.
+                                </p>
+                                <br />
+                                <p>- erik</p>
                             </div>
                         </article>
                     </div>

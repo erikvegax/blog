@@ -2,11 +2,11 @@ import React from 'react'
 
 import type { NextPage, GetStaticProps } from 'next'
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { Post } from '@/types/post'
 import { getAllPosts, getDisplayDate } from "../api/utils";
 
-import Thumbnail from './components/Thumbnail';
 import Header from './components/Header'
 import styles from "../styles/Page.module.css"
 
@@ -18,11 +18,11 @@ const Home: NextPage<Props> = ({ posts }: Props) => {
   return (
     <>
       <Header />
-      <div className={styles["content"]}>
+      <div className={styles.content}>
         <div className='row'>
           <div className={`${styles["content__main"]} large-8 column`}>
             {posts.map((post) => (
-              <article key={post.slug} className={styles["entry"]}>
+              <article key={post.slug} className={styles.entry}>
                 <header className={styles["entry__header"]}>
                   <h2 className={`${styles["entry__title"]} h1`}>
                     <Link href={`/posts/${post.slug}`}>{post.title}</Link>
@@ -33,7 +33,12 @@ const Home: NextPage<Props> = ({ posts }: Props) => {
                     </ul>
                   </div>
                 </header>
-                <Thumbnail title={post.title} src={post.thumbnail} />
+                <Image
+                  height={600}
+                  width={400}
+                  src={post.thumbnail}
+                  alt={`thumbnail for ${post.title} post`}
+                />
                 <div className={styles["entry__content"]}>
                   <p>
                     {post.description}
