@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../styles/Tags.module.css";
+import styles from "../../styles/Tags.module.css";
 
 type Props = {
     tags: string[],
