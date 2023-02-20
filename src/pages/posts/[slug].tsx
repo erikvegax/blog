@@ -4,6 +4,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 
+import redirect from 'nextjs-redirect'
 import { ParsedUrlQuery } from 'querystring';
 
 import { getDisplayDate, getAllPosts, getPost } from '../../api/utils';
@@ -12,10 +13,10 @@ import { Post } from '../../types/post';
 import Thumbnail from '../components/Thumbnail';
 import Header from '../components/Header';
 
-
 import styles from '../../styles/Page.module.css'
+import Tags from '../components/Tags';
 
-
+const Redirect = redirect('/')
 
 type Props = {
     source: MDXRemoteSerializeResult,
@@ -46,6 +47,7 @@ const PostPage = ({ source, frontMatter }: Props) => {
                             <div className={styles["entry__content"]}>
                                 <MDXRemote {...source} />
                             </div>
+                            <Tags tags={frontMatter.tags} />
                         </article>
                     </div>
                 </div>

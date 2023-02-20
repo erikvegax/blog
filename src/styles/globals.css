@@ -1163,7 +1163,7 @@ textarea {
  * # MISC
  *
  * ------------------------------------------------------------------- */
-.h-group:after {
+.group:after {
     content: "";
     display: table;
     clear: both;
@@ -1560,7 +1560,7 @@ html, body {
 }
 
 body {
-    background: #f5f5f5;
+    background: #ffffff;
     font-family: "Merriweather", serif;
     font-size: 1.6rem;
     font-style: normal;
