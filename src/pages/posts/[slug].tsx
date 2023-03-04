@@ -6,14 +6,14 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 import { ParsedUrlQuery } from 'querystring';
 
-import { getDisplayDate, getAllPosts, getPost } from '../../api/utils';
+import { getAllPosts, getPost } from '../../api/utils';
 import { Post } from '../../types/post';
 
-import Thumbnail from '../components/Thumbnail';
-import Header from '../components/Header';
+import Thumbnail from '../../components/Thumbnail';
+import Header from '../../components/Header';
 
 import styles from '../../styles/Page.module.css'
-import Tags from '../components/Tags';
+import Tags from '../../components/Tags';
 
 
 type Props = {
@@ -22,8 +22,6 @@ type Props = {
 }
 
 const PostPage = ({ source, frontMatter }: Props) => {
-    const displayDate = getDisplayDate(frontMatter.date)
-
     return (
         <>
             <Header />
@@ -37,7 +35,7 @@ const PostPage = ({ source, frontMatter }: Props) => {
                                 </h2>
                                 <div className={styles["entry__meta"]}>
                                     <ul>
-                                        <li>{displayDate}</li>
+                                        <li>{frontMatter.date}</li>
                                     </ul>
                                 </div>
                             </header>

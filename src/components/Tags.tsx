@@ -2,7 +2,7 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import styles from "../../styles/Tags.module.css";
+import styles from "../styles//Tags.module.css";
 
 
 type Props = {

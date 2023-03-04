@@ -105,13 +105,3 @@ export function getPostsByTag(tag: string, fields: string[]): Items[] {
 
 	return posts;
 }
-
-export function getDisplayDate(parse: string): string {
-	var date = new Date(parse);
-	const [month, day, year] = [
-		months[date.getMonth()],
-		date.getDate(),
-		date.getFullYear(),
-	];
-	return `${month} ${day}, ${year}`;
-}

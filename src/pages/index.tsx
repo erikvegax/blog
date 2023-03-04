@@ -5,9 +5,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { Post } from '@/types/post'
-import { getAllPosts, getDisplayDate } from "../api/utils";
+import { getAllPosts } from "../api/utils";
 
-import Header from './components/Header'
+import Header from '../components/Header'
 import styles from "../styles/Page.module.css"
 
 type Props = {
@@ -29,7 +29,7 @@ const Home: NextPage<Props> = ({ posts }: Props) => {
                   </h2>
                   <div className={styles["entry__meta"]}>
                     <ul>
-                      <li>{getDisplayDate(post.date)}</li>
+                      <li>{post.date}</li>
                     </ul>
                   </div>
                 </header>

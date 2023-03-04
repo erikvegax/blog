@@ -6,10 +6,10 @@ import Image from 'next/image'
 
 import { ParsedUrlQuery } from 'querystring';
 
-import { getPostsByTag, getDisplayDate } from '@/api/utils'
+import { getPostsByTag } from '@/api/utils'
 import { Post } from '../../types/post';
 
-import Header from '../components/Header';
+import Header from '../../components/Header';
 
 import styles from '@/styles/Page.module.css'
 
@@ -33,7 +33,7 @@ const ByTagsPage = ({ posts }: Props) => {
                                     </h2>
                                     <div className={styles["entry__meta"]}>
                                         <ul>
-                                            <li>{getDisplayDate(post.date)}</li>
+                                            <li>{post.date}</li>
                                         </ul>
                                     </div>
                                 </header>
