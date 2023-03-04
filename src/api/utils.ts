@@ -95,8 +95,6 @@ export function getAllPosts(fields: string[]): Items[] {
 }
 
 export function getPostsByTag(tag: string, fields: string[]): Items[] {
-	console.log(tag);
-
 	// add paths for getting all posts
 	const filePaths = getPostsFilePaths();
 	// get the posts from the filepaths with the matching tag sorted by date
@@ -104,8 +102,6 @@ export function getPostsByTag(tag: string, fields: string[]): Items[] {
 		.map(filePath => getPostItems(filePath, fields))
 		.filter(post => post.tags.includes(tag))
 		.sort((post1, post2) => (post1.date > post2.date ? 1 : -1));
-
-	console.log(posts);
 
 	return posts;
 }
