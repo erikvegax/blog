@@ -25,8 +25,8 @@ const about: NextPage<Props> = () => {
                             />
                             <div className={styles["entry__content"]}>
                                 <p>
-                                    thanks and welcome to my blog. this probably won&#39;t be too serious; i&#39;ll just post about things that have
-                                    happened or things that i like. hope you enjoy.
+                                    this probably won&#39;t be very serious; i&#39;ll just post about things that have
+                                    happened or things that i like.
                                 </p>
                                 <br />
                                 <p>- erik</p>
