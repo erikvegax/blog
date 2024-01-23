@@ -39,7 +39,7 @@ const PostPage = ({ source, frontMatter }: Props) => {
                                     </ul>
                                 </div>
                             </header>
-                            <Thumbnail title={frontMatter.title} src={frontMatter.thumbnail} />
+                            {frontMatter.thumbnail ? <Thumbnail title={frontMatter.title} src={frontMatter.thumbnail} /> : <></>}
                             <div className={styles["entry__content"]}>
                                 <MDXRemote {...source} />
                             </div>

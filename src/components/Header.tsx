@@ -8,7 +8,7 @@ const Header = () => {
             <div className="row">
                 <div className={`${styles["header__content"]} column`}>
                     <h1 className={styles["header__logotext"]}>
-                        <a>erik</a>
+                        <Link href="/">erik</Link>
                     </h1>
                 </div>
             </div>
