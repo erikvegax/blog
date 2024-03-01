@@ -33,14 +33,14 @@ const Home: NextPage<Props> = ({ posts }: Props) => {
                     </ul>
                   </div>
                 </header>
-                {post.thumbnail ?
+                {post.thumbnail &&
                   <Image
                     height={300}
                     width={300}
                     style={{ objectFit: "cover" }}
                     src={post.thumbnail}
                     alt={`thumbnail for ${post.title} post`}
-                  /> : <></>}
+                  />}
                 <div className={styles["entry__content"]}>
                   <p>
                     {post.description}

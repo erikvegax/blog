@@ -2,13 +2,13 @@ import React from 'react'
 
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Link from 'next/link';
-import Image from 'next/image'
 
 import { ParsedUrlQuery } from 'querystring';
 
 import { getPostsByTag } from '@/api/utils'
 import { Post } from '../../types/post';
 
+import Thumbnail from '../../components/Thumbnail';
 import Header from '../../components/Header';
 
 import styles from '@/styles/Page.module.css'
@@ -37,12 +37,7 @@ const ByTagsPage = ({ posts }: Props) => {
                                         </ul>
                                     </div>
                                 </header>
-                                <Image
-                                    height={600}
-                                    width={400}
-                                    src={post.thumbnail}
-                                    alt={`thumbnail for ${post.title} post`}
-                                />
+                                {post.thumbnail && <Thumbnail title={post.title} src={post.thumbnail} />}
                                 <div className={styles["entry__content"]}>
                                     <p>
                                         {post.description}
