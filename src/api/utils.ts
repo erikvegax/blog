@@ -89,8 +89,8 @@ export function getAllPosts(fields: string[]): Items[] {
 	// get the posts from the filepaths with the needed fields sorted by date
 	const posts = filePaths
 		.map(filePath => getPostItems(filePath, fields))
-		.sort((post1, post2) => (post1.date < post2.date ? 1 : -1));
-	// return the available post
+		.sort((post1, post2) => (Date.parse(post1.date) < Date.parse(post2.date) ? 1 : -1));
+
 	return posts;
 }
 
@@ -101,7 +101,7 @@ export function getPostsByTag(tag: string, fields: string[]): Items[] {
 	const posts = filePaths
 		.map(filePath => getPostItems(filePath, fields))
 		.filter(post => post.tags.includes(tag))
-		.sort((post1, post2) => (post1.date > post2.date ? 1 : -1));
+		.sort((post1, post2) => (Date.parse(post1.date) < Date.parse(post2.date) ? 1 : -1));
 
 	return posts;
 }

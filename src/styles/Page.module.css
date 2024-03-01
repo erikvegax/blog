@@ -36,15 +36,19 @@
 }
 
 @media screen and (max-width:900px) {
-    .content__main, .content__sidebar {
+
+    .content__main,
+    .content__sidebar {
         -mflex: 0 0 100%;
         -webkit-box-flex: 0;
         flex: 0 0 100%;
         max-width: 100%;
     }
+
     .content__main {
         padding-right: 16px;
     }
+
     .content__sidebar {
         margin-top: 6rem;
     }
@@ -54,6 +58,7 @@
     .content__main {
         padding-right: 10px;
     }
+
     .content__title {
         text-align: center;
     }
@@ -83,7 +88,8 @@
     color: #272727;
 }
 
-.entry h2 a:hover, .entry h2 a:focus {
+.entry h2 a:hover,
+.entry h2 a:focus {
     color: #000000;
 }
 
