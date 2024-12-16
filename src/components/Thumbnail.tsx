@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import styles from "../styles//Thumbnail.module.css"
+import styles from "../styles/Thumbnail.module.css"
 
 type Props = {
     title: string;

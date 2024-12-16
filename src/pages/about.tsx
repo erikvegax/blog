@@ -20,16 +20,13 @@ const about: NextPage<Props> = () => {
                             <Image
                                 height={600}
                                 width={400}
-                                src={"/assets/sleeping.jpg"}
-                                alt={"sleeping erik"}
+                                src={"/assets/about.jpg"}
+                                alt={"aboutc picture"}
                             />
                             <div className={styles["entry__content"]}>
                                 <p>
-                                    this probably won&#39;t be very serious; i&#39;ll just post about things that have
-                                    happened or things that i like.
+                                    mental dumping ground. if you wanna reach me for any reason you can send an email to <b>erikvegax@duck.com</b>
                                 </p>
-                                <br />
-                                <p>- erik</p>
                             </div>
                         </article>
                     </div>
