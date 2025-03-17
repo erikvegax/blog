@@ -1,22 +1,21 @@
 import React from 'react'
 import Link from 'next/link';
-import styles from '../styles/Header.module.css'
 
 const Header = () => {
     return (
-        <header className={styles.header}>
-            <div className="row">
-                <div className={`${styles["header__content"]} column`}>
-                    <h1 className={styles["header__logotext"]}>
+        <header>
+            <div>
+                <div>
+                    <h1>
                         <Link href="/">erik</Link>
                     </h1>
                 </div>
             </div>
-            <nav className={styles["header__nav-wrap"]}>
-                <div className="row">
-                    <ul className={styles["header__nav"]}>
+            <nav>
+                <div>
+                    <ul>
                         <li>
-                            <Link href="/">home</Link>
+                            <Link href="/thoughts">thoughts</Link>
                         </li>
                         <li>
                             <Link href="/about">about</Link>

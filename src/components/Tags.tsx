@@ -2,8 +2,6 @@ import React from 'react';
 
 import Link from 'next/link';
 
-import styles from "../styles//Tags.module.css";
-
 
 type Props = {
     tags: string[],
@@ -11,7 +9,7 @@ type Props = {
 
 const Tags = ({ tags }: Props) => {
     return (
-        <div className={styles.tags} >
+        <div>
             tags:
             {
                 tags.map((tag, index) => (

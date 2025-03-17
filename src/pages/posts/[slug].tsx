@@ -12,7 +12,7 @@ import { Post } from '../../types/post';
 import Thumbnail from '../../components/Thumbnail';
 import Header from '../../components/Header';
 
-import styles from '../../styles/Page.module.css'
+import styles from '../../styles/Single.module.css'
 import Tags from '../../components/Tags';
 
 
@@ -25,28 +25,24 @@ const PostPage = ({ source, frontMatter }: Props) => {
     return (
         <>
             <Header />
-            <div className={styles.content}>
-                <div className='row'>
-                    <div className={`${styles["content__main"]} large-8 column`}>
-                        <article className={styles.entry}>
-                            <header className={styles["entry__header"]}>
-                                <h2 className={`${styles["entry__title"]} h1`}>
-                                    {frontMatter.title}
-                                </h2>
-                                <div className={styles["entry__meta"]}>
-                                    <ul>
-                                        <li>{frontMatter.date}</li>
-                                    </ul>
-                                </div>
-                            </header>
-                            {frontMatter.thumbnail && <Thumbnail title={frontMatter.title} src={frontMatter.thumbnail} />}
-                            <div className={styles["entry__content"]}>
-                                <MDXRemote {...source} />
-                            </div>
-                            <Tags tags={frontMatter.tags} />
-                        </article>
+            <div>
+                <article>
+                    <header>
+                        <h2>
+                            {frontMatter.title}
+                        </h2>
+                        <div>
+                            <ul>
+                                <li>{frontMatter.date}</li>
+                            </ul>
+                        </div>
+                    </header>
+                    {frontMatter.thumbnail && <Thumbnail title={frontMatter.title} src={frontMatter.thumbnail} />}
+                    <div>
+                        <MDXRemote {...source} />
                     </div>
-                </div>
+                    <Tags tags={frontMatter.tags} />
+                </article>
             </div>
         </>
     )
