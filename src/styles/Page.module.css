@@ -7,7 +7,23 @@
     z-index: 1;
 }
 
-.ascii {
+.asciiContainer {
     position: absolute;
     z-index: -1;
+}
+
+@media screen and (max-width: 814px) {
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ascii {
+        font-size: clamp(4px, 0.6vw, 12px);
+        line-height: 1.2;
+    }
+
+    .asciiContainer {
+        position: relative;
+    }
 }

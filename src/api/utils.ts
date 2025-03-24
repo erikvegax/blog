@@ -2,25 +2,9 @@ import matter from 'gray-matter';
 import { join } from 'path';
 import fs from 'fs';
 
-// @ts-ignore
-import { Jimp, intToRGBA } from "jimp";
-
 const POSTS_PATH = join(process.cwd(), 'src/_posts/');
 
-const months = [
-	'January',
-	'February',
-	'March',
-	'April',
-	'May',
-	'June',
-	'July',
-	'August',
-	'September',
-	'October',
-	'November',
-	'December',
-];
+export const screenThreshold = 815;
 
 type Items = {
 	// each post has a parameter key that takes the value of a string
@@ -107,27 +91,4 @@ export function getPostsByTag(tag: string, fields: string[]): Items[] {
 		.sort((post1, post2) => (Date.parse(post1.date) < Date.parse(post2.date) ? 1 : -1));
 
 	return posts;
-}
-
-export async function imageToAscii(imagePath: string): Promise<string> {
-	const image = await Jimp.read(imagePath);
-	image.resize({w: 70});
-	image.greyscale();
-
-	const asciiChars = '@%#*+=-:. ';
-	let asciiArt = '';
-
-	for (let y = 0; y < image.bitmap.height; y++) {
-		for (let x = 0; x < image.bitmap.width; x++) {
-			const pixelColor = image.getPixelColor(x, y);
-			const brightness = intToRGBA(pixelColor).r;
-			const charIndex = Math.floor((brightness / 255) * (asciiChars.length - 1));
-			asciiArt += asciiChars[charIndex];
-		}
-		asciiArt += '\n';
-	}
-
-	console.log(asciiArt);
-
-	return asciiArt;
 }

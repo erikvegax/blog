@@ -13,14 +13,8 @@ const about: NextPage<Props> = () => {
     return (
         <>
             <Header />
-            <div className={styles.content}>
-                <article className={styles.entry}>
-                    <Image
-                        height={600}
-                        width={400}
-                        src={"/assets/about.jpg"}
-                        alt={"aboutc picture"}
-                    />
+            <div>
+                <article>
                     <div>
                         <p>
                             mental dumping ground. if you wanna reach me for any reason you can send an email to <b>erikvegax@duck.com</b>
