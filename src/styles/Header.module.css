@@ -1,5 +1,9 @@
 .header {
     width: 100%;
+    position: relative;
+    z-index: 1;
+    background: black;
+    font-size: 1.3rem;
 }
 
 @media screen and (max-width:814px) {

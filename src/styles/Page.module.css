@@ -1,15 +1,27 @@
 .flex {
     display: flex;
-}
-
-.header {
+    align-items: flex-start;
     position: relative;
-    z-index: 1;
+    min-height: 100vh;
 }
 
 .asciiContainer {
     position: absolute;
-    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.ascii {
+}
+
+.fullArt {
+    display: block;
+    margin: 0;
+}
+
+.mobileArt {
+    display: none;
+    margin: 0;
 }
 
 @media screen and (max-width: 814px) {
@@ -25,5 +37,13 @@
 
     .asciiContainer {
         position: relative;
+    }
+
+    .fullArt {
+        display: none;
+    }
+
+    .mobileArt {
+        display: block;
     }
 }
